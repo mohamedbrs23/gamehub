@@ -8,17 +8,17 @@
 
   {{-- Top Bar : titre + tri + recherche --}}
   <div class="flex justify-between items-center mb-6">
-    <h2 class="text-2xl font-bold">{{ __('messages.trending') }}</h2>
+    <h2 class="text-2xl font-bold">{{ __('Trending Games') }}</h2>
 
     <div class="flex gap-4 items-center">
       <form method="GET">
         <select name="sort" onchange="this.form.submit()" class="bg-white border px-3 py-2 rounded-lg shadow-sm">
-          <option value="latest" {{ $sort == 'latest' ? 'selected' : '' }}>{{ __('messages.sort_latest') }}</option>
-          <option value="rating" {{ $sort == 'rating' ? 'selected' : '' }}>{{ __('messages.sort_rating') }}</option>
-          <option value="size" {{ $sort == 'size' ? 'selected' : '' }}>{{ __('messages.sort_size') }}</option>
+          <option value="latest" {{ $sort == 'latest' ? 'selected' : '' }}>{{ __('Latest') }}</option>
+          <option value="rating" {{ $sort == 'rating' ? 'selected' : '' }}>{{ __('Rating') }}</option>
+          <option value="size" {{ $sort == 'size' ? 'selected' : '' }}>{{ __('Size') }}</option>
         </select>
       </form>
-      <input id="searchInput" type="text" placeholder="{{ __('messages.search_placeholder') }}" class="bg-white border px-4 py-2 rounded-lg shadow-sm w-64">
+      <input id="searchInput" type="text" placeholder="{{ __('Search games..') }}" class="bg-white border px-4 py-2 rounded-lg shadow-sm w-64">
     </div>
   </div>
 
@@ -37,7 +37,7 @@
         </div>
 
         <h4 class="font-semibold text-sm">{{ $game->title }}</h4>
-        <p class="text-xs text-blue-600">{{ __('messages.category') ?? 'Action' }}</p>
+        <p class="text-xs text-blue-600">{{ __('Category') ?? 'Action' }}</p>
 
         {{-- Infos principales --}}
         <div class="flex justify-center gap-6 text-xs text-gray-500 mt-2">
@@ -66,7 +66,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v6m0 0l-3-3m3 3l3-3m-3-9v6" />
   </svg>
-  {{ __('messages.install') }}
+  {{ __('Install') }}
 </a>
 
       </div>
